@@ -25,25 +25,30 @@ public class playerMovement : MonoBehaviour {
 	void Update ()
     {
         //Basic movement
-        float moveHor = Input.GetAxis("Horizontal");
+        /*float moveHor = Input.GetAxis("Horizontal");
         float moveVer = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHor, 0.0f, moveVer) * speed * Time.deltaTime;
 
-        rb.MovePosition(transform.position + movement);
+        rb.MovePosition(transform.position + movement);*/
 
-        //Code for making the jump less "air time"
-        if (rb.velocity.y < 0)
+        if (Input.GetKeyDown("w"))
         {
-            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime; 
-        }
-        else if (rb.velocity.y > 0 && !Input.GetKeyDown("space"))
-        {
-            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime; 
+            
         }
 
         //Player rotation
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, cam.transform.localEulerAngles.y, transform.localEulerAngles.z);
+
+        //Code for making the jump less "air time"
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !Input.GetKeyDown("space"))
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
 
         //Jumping
         if (onGround == true && Input.GetKeyDown("space"))
