@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor 1.unity
     guid: 891f150b63f06ab4a937576247934ff6
+  - enabled: 1
+    path: Assets/Scenes/Floor 2.unity
+    guid: f571ae9ed703db54dbe7a2663379dc14
+  - enabled: 1
+    path: Assets/Scenes/Floor 3.unity
+    guid: 12d1d8ffdf99ee944a0fadf4c8d09f23
+  - enabled: 1
+    path: Assets/Scenes/Floor 4.unity
+    guid: f38cc6211e48feb4cbc83391f378af0b
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: b1b7ef224547ee846974d674fbc8b595
   m_configObjects: {}

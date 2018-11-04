@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Key
+  - Door
+  - Right
+  - Wrong
+  - Right1
+  - Right2
+  - Right3
+  - Wrong1
+  - Wrong2
+  - Wrong3
   layers:
   - Default
   - TransparentFX
