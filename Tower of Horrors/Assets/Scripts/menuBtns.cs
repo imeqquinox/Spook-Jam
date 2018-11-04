@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class menuBtns : MonoBehaviour {
 
-    public Button playBtn; 
+    public Button playBtn;
+    public Button replayBtn; 
 
     // Use this for initialization
     void Start ()
     {
         //On click
         playBtn.onClick.AddListener(TaskOnClick);
+        replayBtn.onClick.AddListener(TaskOnClick);
 	}
 
     void TaskOnClick()
