@@ -22,6 +22,7 @@ public class playerController : MonoBehaviour {
 
     private bool onGround;
     private bool key;
+    private bool winner = false;
 
     // Use this for initialization
     void Start ()
@@ -75,7 +76,10 @@ public class playerController : MonoBehaviour {
         //Timer 
         count -= +Time.deltaTime;
 
-        timer.text = "Timer: " + count; 
+        if (winner == false)
+        {
+            timer.text = "Timer: " + count;
+        }
 
         if (count < 0)
         {
@@ -139,6 +143,8 @@ public class playerController : MonoBehaviour {
         {
             SceneManager.LoadScene(4);
             transform.position = new Vector3(-10.0f, 2.57f, -7.5f);
+            winner = true; 
+            timer.text = "";
         }
     }
 }
